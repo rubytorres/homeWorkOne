@@ -17,9 +17,37 @@ package divisibility;
 //10 is not divisible by 0
 
 
+import java.util.Scanner;
+
 public class Divisibility {
 
     public static void main(String[] args) {
+
+        int dividend;
+        int divisor;
+
+        //Creates a Scanner object to read user's input.
+        Scanner input = new Scanner(System.in);
+
+
+        //Prompt is given and the dividend is read.
+        System.out.print("Enter the dividend: ");
+        dividend = input.nextInt();
+        //Prompt is given and the divisor is read.
+        System.out.print("Enter the divisor: ");
+        divisor = input.nextInt();
+
+        //If the dividend is evenly divisible by the divisor, the program outputs the first message.
+        //Otherwise, the next message is displayed.
+        if(divisor == 0 || dividend % divisor != 0 ){
+            System.out.println(dividend + " is not divisible by " + divisor);
+        }
+        else {
+            System.out.println(dividend + " is divisible by " + divisor + "!");
+        }
+        //Closes Scanner
+        input.close();
+
 
     }
 }

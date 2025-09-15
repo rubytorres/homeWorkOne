@@ -12,9 +12,28 @@ What number would you like to compute the factorial for? 4
 24
 */
 
+import java.util.Scanner;
+
 public class Factorial {
 
     public static void main(String[] args) {
+
+        //Initializes total to 1 to keep track of the integers being multiplied.
+        int total = 1;
+        int number;
+
+        //Asks the user to give a number.
+        Scanner input = new Scanner(System.in);
+        System.out.print("What number would you like to compute the factorial for? ");
+        number = input.nextInt();
+
+        //Multiples all positive integers from 1 to number.
+        for(int i = 1; i <= number; i++){
+            total *= i;
+        }
+        //Prints total
+        System.out.println(total);
+        input.close();
 
     }
 }
